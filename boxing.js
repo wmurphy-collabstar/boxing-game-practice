@@ -33,5 +33,16 @@ function applyDamage(opponent, damage) {
     }
     console.log(`${opponent.name}'s health is now ${opponent.health}.`);
 }
+
+// Function to check if the game is over
+function checkKnockout(opponent) {
+    if ( opponent.health === 0) {
+        console.log(`${opponent.name} has been knocked out!`);
+        console.log(`${currentPlayer.name} is the WINNER! 🏆`);
+        return true; // Game over
+    }
+    return false;
+}
+    
     
     
